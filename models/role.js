@@ -3,7 +3,9 @@ const {Schema,model} = require('mongoose');
 const RoleSchema = Schema({
     rol: {
         type: String,
-        required: [true,'El rol es obligatorio']
+        required: [true,'El rol es obligatorio'],
+        default: 'USER_ROLE',
+        enum: ['ADMIN_ROLE', 'USER_ROLE']
     }
 });
 
